@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><center>Inheritance & Prototype</center></h1>
+    <h2>
+      1.Create 2 objects - parent and child. Attach methods to parent and use
+      those methods in child object using parents prototype
+    </h2>
+    <pre>
+Ans:
+        let parent= {
+            name:'Ramesh Cheruku',
+            age:24
+        }
+        
+        let child= {
+            gender:'male',
+            school:'nsrit'
+        }
+        child.__proto__=parent
+        console.log(child.name)</pre
+    >
+    <h2>2.Write code to explain prototype chaining</h2>
+    <pre>
+Ans:function student(){
+        this.name='ramesh',
+        this.class='b.tech',
+        this.specialization='cse'
+    }
+    let information=new student()
+    student.prototype.age=21
+    student.prototype.gender='male'
+    console.log(information.age)
+    console.log(information.name)</pre
+    >
+    <h2>
+      3.Add a method to calculate sum of all elements in Array in array's
+      protype, use that method to calculate sum for multiple arrays
+    </h2>
+    <pre>
+Ans:let arr=[1,2,3,4,5,6,7]
+    let add=arr.reduce((sum,value)=>{
+        return sum+value
+    })
+    console.log(add)/</pre
+    >
+    <h2>
+      4.Write a JavaScript function to retrieve all the names of object's own
+      and inherited properties.
+    </h2>
+    <pre>
+function parent(){
+        this.name='ramesh'
+        this.age=24
+        child.call(this)
+    }
+    function child(){
+        this.rollno='18NU1A0462',
+        this.gender='male'
+    } 
+     let student=new parent()
+     console.log(student)
+     let name=function(obj){
+        for(let  i in obj){
+            console.log(i)
+        }
+     }
+     name(student)</pre
+    >
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Problem Solving</h1>
+    <h2>1.Find the Smaller Angle</h2>
+    <pre>
+      var Minimal_Angle = (h, m) => 
+      {
+        const hAngle=(h*30)+(m/2);
+        const mAngle=m*6;
+        let a=0;
+        if(hAngle>mAngle)
+        {
+           a=hAngle-mAngle;
+        }
+        else
+        {
+          a=mAngle-hAngle;
+        }
+        
+        if(a>180)
+        {
+          a=360-a;
+        }
+        
+          return a;
+      };
+       
+      </pre
+    >
+    <h2>2.Check whether the year is Leap year or not.</h2>
+    <pre>
+ 
+      var Check_Leap = (year) => 
+      {
+       
+       if((year%4==0&year%100!=0)||(year%400==0))
+       {
+         return "Leap Year";
+       }
+       return "Non Leap Year"
+      
+      };</pre
+    >
+    <h2>3.Perfect Number Check.</h2>
+    <pre>
+var Perfect_Check = (N) => 
+      {
+           let count=1; 
+           for(i=2;i<=N/2;i++)
+           {
+             if(N%i===0)
+             {
+               count=count+i;
+             }
+           }
+           if(count==N)
+           {
+             return "YES";
+           }
+           return "NO";
+      };
+       
+      </pre
+    >
+    <h2>4.Reverse a Number.</h2>
+    <pre>
+var Reverse_Number = (N) => 
+      {
+      let x = N.toString();
+      let r = x.split("").reverse().join("");
+      
+      return parseInt(r);
+      
+      
+      };</pre
+    >
+    <h2>5.Substring Check.</h2>
+    <pre>
+var Substring_Check = (S1, S2) => 
+      {
+          let arr= S1.split(" ");
+          for(let i=0;i<"arr.length;i++)
+          { 
+            if(arr[i]==S2)
+            {
+              return "YES";
+            }
+          }
+        
+              return "NO";
+      };</pre
+    >
+  </body>
+</html>
